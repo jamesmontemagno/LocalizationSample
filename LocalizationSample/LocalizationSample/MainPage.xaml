@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:LocalizationSample.Helpers;assembly=LocalizationSample" 
+             xmlns:local="clr-namespace:LocalizationSample"
+             x:Class="LocalizationSample.MainPage"
+             Title="Let's Translate!">
+
+    <StackLayout Padding="20">
+	    <Label Text="{i18n:Translate HelloWorld}" 
+               LineBreakMode="WordWrap"/>
+
+        <Label 
+                Margin="0,60,0,0"
+                Text="Translate this automatically"
+                LineBreakMode="WordWrap"
+               x:Name="LabelTranslate"/>
+
+        <Picker ItemsSource="{Binding Languages}"
+                ItemDisplayBinding="{Binding DisplayName}"
+                x:Name="PickerLanguages"/>
+
+    </StackLayout>
+
+</ContentPage>
